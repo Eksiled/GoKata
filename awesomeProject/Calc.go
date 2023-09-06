@@ -66,14 +66,14 @@ func ChangeRoma(a string, b string, c string, d string) (string, error) {
 			t = a2 / c2
 		default:
 			t := ""
-			return t, errors.New("не корректный операнд, повторите ввод")
+			return t, errors.New("не корректный оператор, повторите ввод")
 		}
 	} else {
 		a2, _ = strconv.Atoi(a)
 		c2, _ = strconv.Atoi(c)
 		if a2 == 0 || c2 == 0 {
 			t := ""
-			return t, errors.New("нельзя использовать Римские и Арабские числа одновременно, а также использовать 0 или дробные числа, повторите ввод")
+			return t, errors.New("нельзя использовать Римские и Арабские числа в одной операции, а также использовать 0 или дробные числа, повторите ввод")
 		}
 		if a2 > 10 || c2 > 10 {
 			t := ""
@@ -91,7 +91,7 @@ func ChangeRoma(a string, b string, c string, d string) (string, error) {
 		default:
 			strconv.Itoa(t)
 			t := ""
-			return t, errors.New("не корректный операнд, повторите ввод")
+			return t, errors.New("не корректный оператор, повторите ввод")
 		}
 		return strconv.Itoa(t), nil
 	}
