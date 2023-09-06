@@ -28,7 +28,7 @@ func ChangeRoma(a string, b string, c string, d string) (string, error) {
 
 	if d != "" {
 		d = ""
-		return d, errors.New("нельзя использовать больше 2ух операндов")
+		return d, errors.New("нельзя использовать больше 2ух операндов, повторите ввод")
 	}
 	if a == "" || b == "" || c == "" {
 		return d, errors.New("нужно больше 1 операнда, повторите ввод")
